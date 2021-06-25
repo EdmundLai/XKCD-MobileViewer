@@ -22,6 +22,10 @@ export default function App() {
     getAllComics();
   }, []);
 
+  if (comics === null) {
+    return <View></View>;
+  }
+
   return (
     <Swiper>
       {comics.map((comic) => {
